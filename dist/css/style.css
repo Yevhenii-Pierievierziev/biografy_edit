@@ -1,3 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Bebas+Neue:regular&display=swap);
+
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,regular,400&display=swap);
+
 @charset "UTF-8";
 
 * {
@@ -20,10 +24,10 @@ body {
 }
 
 body {
-  color: #000;
+  color: #ffffff;
   line-height: 1;
-  font-family: "";
-  font-size: 0.875rem;
+  font-family: "Josefin Sans";
+  font-size: 1.125rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -34,7 +38,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "";
+  font-family: "Josefin Sans";
   font-size: inherit;
 }
 
@@ -65,6 +69,10 @@ h5,
 h6 {
   font-weight: inherit;
   font-size: inherit;
+}
+
+body {
+  background-color: #323232;
 }
 
 .lock body {
@@ -111,9 +119,38 @@ h6 {
 */
 
 [class*=__container] {
-  max-width: 75rem;
+  max-width: 39rem;
   margin: 0 auto;
-  padding: 0 0.9375rem;
+}
+
+[class*=__container-big] {
+  max-width: 71.25rem;
+  margin: 0 auto;
+  padding: 0 0.625rem;
+}
+
+.button {
+  font-family: "Josefin Sans";
+  font-weight: 500;
+  display: inline-block;
+  line-height: 1.2222222222;
+  padding: 1.3125rem 1.5625rem;
+  background-color: #A00000;
+  border-radius: 0.625rem;
+  height: 64px;
+  -webkit-transform: all 0.3s ease 0s;
+      -ms-transform: all 0.3s ease 0s;
+          transform: all 0.3s ease 0s;
+}
+
+.button__border {
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 1.25rem 1.5625rem;
+}
+
+.button__border._fw {
+  width: 100%;
 }
 
 [class*=-ibg] {
@@ -133,4 +170,54 @@ h6 {
 [class*=-ibg_contain] img {
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.header__container-big {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__menu {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.header__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.header__logo {
+  width: 165px;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2.75rem;
+}
+
+@media (any-hover: hover) {
+  .button:hover {
+    background-color: #000000;
+  }
+
+  .button__border:hover {
+    background-color: #000;
+    color: #fff;
+  }
 }
